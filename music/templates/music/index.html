@@ -1,0 +1,17 @@
+{% if all_albums %}
+	<html>
+	<head>
+		<title>Music App</title>
+	</head>
+	<body>
+		<h3>Your albums: </h3>
+		<ul>
+			{% for album in all_albums %}
+				<li><a href="/music/{{ album.id }}/">{{ album.album_title }}</li>
+			{% endfor %}
+		</ul>
+	</body>
+	</html>
+{% else %}
+	<h1>You don;t have any albums</h1>
+{% endif %}
